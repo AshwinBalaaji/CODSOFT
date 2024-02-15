@@ -1,0 +1,45 @@
+import java.util.*;
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    Random ran=new Random();
+	    int answer=ran.nextInt(100)+1;
+	    System.out.println("Enter a number between(1-100):");
+	    int guess=sc.nextInt();
+	    if(guess==answer)
+	    {
+	        System.out.println("Great !!!. You have guessed the number "+answer+" correctly congrats.");
+	    }
+	    else
+	    {
+	        int r=1;
+	        while(r==1)
+	        {
+	            if(guess>answer)
+	            {
+	                System.out.println("Your guess "+guess+" is incorrect.You answer is higher.Guess Again");
+	                System.out.println("Guess a number:");
+	                System.out.println("Enter a number between(1-100):");
+	                guess=sc.nextInt();
+	            }
+	            else if(guess<answer)
+	            {
+	                System.out.println("Your guess "+guess+" is incorrect.You answer is lower.Guess Again");
+	                System.out.println("Guess a number:");
+	                System.out.println("Enter a number between(1-100):");
+	                guess=sc.nextInt();
+	            }
+	            else
+	            {
+	               System.out.println("Great !!!. You have guessed the number "+answer+" correctly congrats.");
+	               r=0;
+	     
+	            }
+	        }
+	        
+	    }
+	   
+	}
+}
